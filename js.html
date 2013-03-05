@@ -1,0 +1,45 @@
+<html>
+<body>
+	<script language="JavaScript">
+        	function jsnicupdate(){
+			var tbl = document.getElementById('nic');
+			var length = tbl.rows.length;
+			var newrow = tbl.insertRow(length);
+			var newcell = newrow.insertCell(0);
+			var radio = document.createElement('input');
+			radio.setAttribute("type","radio");
+			radio.value = length  -1;
+			newcell.appendChild(radio);
+			var newcell1 = newrow.insertCell(1);
+			var mac = document.createTextNode("00:55:33:44:11");
+			newcell1.appendChild(mac);
+			var newcell2 = newrow.insertCell(2);
+			var nicmodel = document.getElementById("select0");
+			nnicmodel =  nicmodel.cloneNode(true);
+			newcell2.appendChild(nnicmodel);
+			
+			
+		}
+	</script>
+	
+	
+         <h1> Network Details for vm2 </h1>
+	<form name="nicform" method="get">
+	 <table id="nic" border="1">
+	  <tr>
+	     <th> Id </th>
+	     <th> Mac </th>
+	     <th> Model </th>
+	     <th> Bridge </th>
+	     <td> <input type="button" name="nicupdate" value="Update" disabled>  </td>
+		<tr>
+		<td><input type="radio" name="radio" value=0 /> </td>
+		<td>54:52:00:46:1c:e4</td>
+		<td><select id="select0" name="nicmodelselect" onChange="jsnicupdate()">
+                    <option name=ne2k-pci selected> ne2k-pci </option>
+		    <option name=virtio > virtio </option>
+		     <option name=e1000 > e1000 </option>
+		  </select>
+		 </td>
+</body>
+</html>
