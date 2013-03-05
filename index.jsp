@@ -1,6 +1,6 @@
 <html>
 	 <head>
-	   <title>Bonoo Virtualization Manager</title>
+	   <title>Bonoo New Virtualization Manager</title>
 	 </head>
 	<frameset rows="10%,*">
 		<frame src="main.jsp" name="main" scrolling="no">
